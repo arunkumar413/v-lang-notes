@@ -46,25 +46,25 @@ fn print_name_with_type(){
 
 ```v
 fn print_data_types(){
-	age := int(30) // declare a variable called age and assign it the value 30.
-	num1 := i8(10) // declare a variable called num with type i8 and assign it the value 10.
-	num2 := i16(20) // declare a variable called num with type i16 and assign it the value 20.
-	num3 := i32(30) // declare a variable called num with type i32 and assign it the value 30.
-	num4 := i64(40) // declare a variable called num with type i64 and assign it the value 40.
-	num5 := u8(50) // declare a variable called num with type u8 and assign it the value 50.
-	num6 := u16(60) // declare a variable called num with type u16 and assign it the value 60.
-	num7 := u32(70) // declare a variable called num with type u32 and assign it the value 70.
-	num8 := u64(80) // declare a variable called num with type u64 and assign it the value 80.
-	num9 := f32(90.0) // declare a variable called num with type f32 and assign it the value 90.0.
-	num10 := f64(100.0) // declare a variable called num with type f64 and assign it the value 100.0.
-	is_true := bool(true) // declare a variable called is_true with type bool and assign it the value true.
-	is_false := bool(false) // declare a variable called is_false with type bool and assign it the value false.
+		age := int(30) // declare a variable called age and assign it the value 30.
+	num1 := i8(10)  //8 bit integer
+	num2 := i16(20)  // 16 bit integer
+	num3 := i32(30)  // 32 bit integer
+	num4 := i64(40)  // 64 bit integer
+	num5 := u8(50) // unsigned 8 bit integer
+	num6 := u16(60) // unsigned 16 bit integer
+	num7 := u32(70) // unsigned 32 bit integer
+	num8 := u64(80) // unsigned 64 bit integer
+	num9 := f32(90.0) // 32 bit floating point number
+	num10 := f64(100.0) // 64 bit floating point number
+	is_true := bool(true) // boolean type. Value can be either true or false.
+	is_false := bool(false) 
 	println("Age: ${age}, num1: ${num1}, num2: ${num2}, num3: ${num3}, num4: ${num4}, num5: ${num5}, num6: ${num6}, num7: ${num7}, num8: ${num8}, num9: ${num9}, num10: ${num10}, is_true: ${is_true}, is_false: ${is_false}")
 }
 ```
 
 ## Mutable variables
-   Variables are immutable by default in V. To declare a mutable variable, you can use the `mut` keyword. In this example, we declare a mutable variable called `name` and assign it the value "Alice". We then change the value of the variable to "Bob" and print it to the console.
+Variables are immutable by default in V. To declare a mutable variable, you can use the `mut` keyword.
 
 ```v
 fn print_mutable_variable(){
@@ -79,8 +79,7 @@ fn print_mutable_variable(){
 
  1) In V, constants are declared using the `const` keyword. 
  2) Constants are immutable and cannot be changed after they are declared. 
- 3) In this example, we declare a constant called `PI` and assign it the value 3.14. We also declare a constant called `MAX_VALUE` and assign it the value 100.
- 4) They cannot be declared inside the functions. They have to be declared outside the functions at the beginning of the file/module.
+ 3) They cannot be declared inside the functions. They have to be declared outside the functions at the beginning of the file/module.
 
  ```v
  	const PI = 3.14 // declare a constant called PI and assign it the value 3.14.
@@ -134,8 +133,7 @@ fn swap(a int, b int) (int, int){
 ## Arrays
 
  1) In V, arrays are used to store multiple values of the same type. 
- 2) In this example, we declare an array called `numbers` and assign it the values [1, 2, 3, 4, 5]. 
- 3) We then print the values of the array to the console.
+ 2) In this example, we declare an array called `numbers` and assign it the values [1, 2, 3, 4, 5].
 
 ```v
 fn print_array(){
