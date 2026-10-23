@@ -82,7 +82,7 @@ fn print_mutable_variable(){
  3) In this example, we declare a constant called `PI` and assign it the value 3.14. We also declare a constant called `MAX_VALUE` and assign it the value 100.
  4) They cannot be declared inside the functions. They have to be declared outside the functions at the beginning of the file/module.
 
- ```
+ ```v
  	const PI = 3.14 // declare a constant called PI and assign it the value 3.14.
 	const MAX_VALUE = 100 // declare a constant called MAX_VALUE and assign it the value 100.
 	println("PI: ${PI}, MAX_VALUE: ${MAX_VALUE}")
