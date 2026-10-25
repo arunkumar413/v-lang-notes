@@ -179,6 +179,40 @@ fn print_array(){
 
 }
 
+/*
+
+## Structs
+
+Structs are used to define custom data types in V. They allow you to group related data together.
+
+*/
+
+fn print_struct(){
+	// An example of a struct called Person that has two fields: name and age. 
+	struct Person {
+		name string
+		age  int,
+		plan string = "free" // default value for the plan field is "free"
+		city string @[required] // required field. Must be provided when creating an instance of the struct.
+	}
+
+	// Create an instance of the Person struct and assign values to its fields.
+	person1 := Person{name: "Alice", age: 30, city: "New York"}
+
+	// The above can be created as follows as well.
+	person2 := Person{"Bob", 25, "paid", "Los Angeles"}
+
+// Create struct on the heap using the `&` operator. This allows you to create a pointer to the struct, which can be useful when you want to pass the struct to functions or store it in data structures that require pointers.
+	person3 := &Person{name: "Charlie",age:  35, "paid", city: "Chicago"}
+
+
+	println("Name: ${person1.name}, Age: ${person1.age}") // print the values of the fields of the person struct to the console.
+}
+
+
+
+
+
 
 
 
