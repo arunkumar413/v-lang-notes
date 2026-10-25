@@ -175,17 +175,19 @@ Structs are used to define custom data types in V. They allow you to group relat
 fn print_struct(){
 	// An example of a struct called Person that has two fields: name and age. 
 	struct Person {
-		name string
-		age  int,
+		name string // private and immutable field. Can only be accessed within the struct and cannot be changed after it is created.
+		age  int
 		plan string = "free" // default value for the plan field is "free"
 		city string @[required] // required field. Must be provided when creating an instance of the struct.
+		 mut country string = "USA" // mutable field with a default value. Can be changed after the struct is created.
+		 pub mut email string // public mutable field. Can be accessed and changed from outside the struct.
 	}
 
 	// Create an instance of the Person struct and assign values to its fields.
-	person1 := Person{name: "Alice", age: 30, city: "New York"}
+	person1 := Person{name: "Alice", age: 30, city: "New York",country: "USA", email: "alice@example.com"}
 
 	// The above can be created as follows as well.
-	person2 := Person{"Bob", 25, "paid", "Los Angeles"}
+person2 := Person{"Bob", 25, "paid", "Los Angeles","USA", "bob@example.com"}
 
 // Create struct on the heap using the `&` operator. This allows you to create a pointer to the struct, which can be useful when you want to pass the struct to functions or store it in data structures that require pointers.
 	person3 := &Person{name: "Charlie",age:  35, "paid", city: "Chicago"}
